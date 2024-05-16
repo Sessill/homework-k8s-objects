@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: homework-deployment
   labels:
-    app: homework
+    app: homework-service
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: homework
+      app: homework-service
   template:
     metadata:
       labels:
-        app: homework
+        app: homework-service
     spec:
       containers:
-      - name: homework
+      - name: homework-service
         image: sessill/homework-docker:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8000

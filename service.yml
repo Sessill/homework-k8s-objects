@@ -4,10 +4,10 @@ metadata:
   name: homework-service
 spec:
   selector:
-    app: homework
+    app: homework-service
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 80
+      port: 80
+      targetPort: 8000
   type: ClusterIP
       
